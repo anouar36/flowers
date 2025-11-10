@@ -1169,6 +1169,27 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   }
 }
 
+/* Click Heart Effect */
+.click-heart {
+  user-select: none;
+  cursor: default;
+}
+
+@keyframes heartFloat {
+  0% {
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  15% {
+    transform: translate(-50%, -50%) scale(1.2) rotate(-5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -150%) scale(0.3) rotate(10deg);
+    opacity: 0;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .romantic-text {
@@ -1192,4 +1213,65 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   .sparkle {
     font-size: 1rem;
   }
+}
+
+/* Music Control Button */
+.music-control {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #ff0080;
+  font-size: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-control:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+}
+
+@keyframes speaking-glow {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 20px rgba(255, 0, 128, 0.5));
+  }
+  50% {
+    filter: brightness(1.3) drop-shadow(0 0 30px rgba(0, 255, 128, 0.8));
+  }
+}
+
+/* Voice Control Button */
+.voice-control {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #ff0080;
+  font-size: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voice-control:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
 }
